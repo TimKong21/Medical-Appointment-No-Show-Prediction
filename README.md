@@ -39,7 +39,7 @@ This rich dataset provides a comprehensive view of factors potentially influenci
 - **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
 - **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
 
-</p>
+<p align="center">
     <img src="Notebook_images/High level structure.png" alt="Image" style="width: 90%; height: 50%;" />
 </p>
 
