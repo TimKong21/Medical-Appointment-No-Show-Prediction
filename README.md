@@ -4,9 +4,9 @@
 ## Business Problem
 A significant issue in medical setting is patients failing to attend scheduled doctor appointments despite receiving instructions (no-shows). Our client, a medical ERP solutions provider, seeks to tackle this by introducing a machine learning model into their software. This model aims to predict patient attendance, enabling medical providers to optimize appointment management.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="Notebook_images/Patient no show.png" alt="Image" style="width: 90%; height: 50%;" />
-</div>
+</p>
 
 ## Dataset Description
 The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments) utilized in this project comprises appointment records from medical institutions, capturing various attributes related to patients and their appointments. Key features include:
@@ -39,9 +39,9 @@ This rich dataset provides a comprehensive view of factors potentially influenci
 - **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
 - **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
 
-<div style="text-align: center;">
+</p>
     <img src="Notebook_images/High level structure.png" alt="Image" style="width: 90%; height: 50%;" />
-</div>
+</p>
 
 For comprehensive project overview, please refer to `Project Documentation.pdf`.
 
