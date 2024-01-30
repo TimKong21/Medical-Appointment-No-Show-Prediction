@@ -1,0 +1,2 @@
+USER_NAME = 'XXX'
+PASSWORD = 'XXX'
