@@ -54,13 +54,13 @@ For comprehensive project overview, please refer to `Project Documentation.pdf`.
     - `hyperparameters/`: Contains the best hyperparameters obtained from Hyperopt tuning.
 - `src/`: Source code for the project.
     - `data_loader.py`: Script for loading and preprocessing data.
-        - `preprocessing.py`: Script containing data preprocessing functions.
+    - `preprocessing.py`: Script containing data preprocessing functions.
     - `feature_engineering.py`: Script for feature engineering tasks.
     - `modeling.py`: Contains model training, evaluation, and prediction scripts.
     - `train.py`: Main script for training the model.
     - `predict.py`: Script for making predictions using the trained model.
-        - `requirements.txt`: Lists the Python dependencies required for the project.
-        - `snowflake_creds.py`: Contains credentials for Snowflake database access.
+    - `requirements.txt`: Lists the Python dependencies required for the project.
+    - `snowflake_creds.py`: Contains credentials for Snowflake database access.
 - `model/`: Trained model files and artifacts.
 - `deployment_assets/`: Files and scripts used for deploying the model.
 - `Snowflake_assets/`: Contains an original data file used for creating the database and a SQL file containing queries for exploratory analysis.
