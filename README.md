@@ -1,11 +1,10 @@
 # Predicting Patient No-Shows in Healthcare Appointments
 
-
 ## Business Problem
 A significant issue in medical setting is patients failing to attend scheduled doctor appointments despite receiving instructions (no-shows). Our client, a medical ERP solutions provider, seeks to tackle this by introducing a machine learning model into their software. This model aims to predict patient attendance, enabling medical providers to optimize appointment management.
 
 <p align="center">
-    <img src="Notebook_images/Patient no show.png" alt="Image" style="width: 90%; height: 50%;" />
+    <img src="Notebook_images/Patient no show.png" alt="Image" style="width: 100%; height: 25%;" />
 </p>
 
 ## Dataset Description
@@ -34,13 +33,12 @@ The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappoi
 
 This rich dataset provides a comprehensive view of factors potentially influencing patient attendance, enabling the development of a nuanced predictive model.
 
-
 ## Solution approach
 - **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
 - **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
 
 <p align="center">
-    <img src="Notebook_images/High level structure.png" alt="Image" style="width: 90%; height: 50%;" />
+    <img src="Notebook_images/High level structure.png" alt="Image" style="width: 100%; height: 25%;" />
 </p>
 
 For comprehensive project overview, please refer to `Project Documentation.pdf`.
@@ -69,7 +67,6 @@ For comprehensive project overview, please refer to `Project Documentation.pdf`.
 - `Project Documentation.pdf`: Comprehensive documentation of the project.
 - `Model Deployment.ipynb`: Jupyter notebook detailing the model deployment process.
 - `README.md`: This file, contains project information and instructions.
-
 
 ## Usage
 - To train the model locally, first set up the project environment, install the required Python dependencies:
