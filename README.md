@@ -11,6 +11,7 @@ A significant issue in medical setting is patients failing to attend scheduled d
 ## Dataset Description
 
 The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments) utilized in this project comprises appointment records from medical institutions, capturing various attributes related to patients and their appointments. Key features include:
+
 - **Patient demographics**: age and gender
 - **Health characteristics**: the presence of conditions such as diabetes or hypertension
 - **Appointment-specific details**: scheduled and appointment dates, and whether the patient received a reminder SMS
@@ -72,17 +73,16 @@ Medical-Appointment-No-Show-Prediction
 │   └── snowflake_creds.py      # Contains credentials for Snowflake database access.
 ├── model/                      # Trained model files and artifacts.
 ├── deployment_assets/          # Files and scripts used for deploying the model.
-├── Snowflake_assets/           # Original data file for database creation and SQL queries for EA.
-├── Notebook_images/            # Images used in the Model Deployment.ipynb notebook.
+├── Snowflake_assets/           # Original data file for database creation and SQL queries for exploratory analysis.
 ├── Project Notebook.ipynb      # Jupyter notebook detailing the model development process.
 ├── Project Documentation.pdf   # Comprehensive documentation of the project.
-├── Model Deployment.ipynb      # Jupyter notebook detailing the model deployment process.
-└── README.md                   # Project information and instructions.
+├── Model Deployment.ipynb      # Jupyter notebook detailing the model deployment process
 ```
 
 ## Usage
 
 To get started with this project and replicate the results or deploy the model, follow the steps outlined below:
+
 - To train the model locally, first set up the project environment, install the required Python dependencies:
     ```bash
     pip install -r src/requirements.txt
@@ -96,6 +96,13 @@ To get started with this project and replicate the results or deploy the model, 
     ```
 
 - To train model on AWS Sagemaker, upload all project assets to the workspace, and run `Code Modularization.ipynb`.
-- For throughout model building process, refer `project notebook.ipynb`.
-- For detail model deployment steps, refer `model deployment.ipynb`.
-- For comprehensive project overview, please refer to `Project Documentation.pdf`.
+
+### Additional Resources
+
+For a comprehensive understanding of the project, including its development and deployment processes, refer to the following documents:
+
+- `Project Notebook.ipynb`: A Jupyter notebook detailing the model development process.
+- `Project Documentation.pdf`: Comprehensive documentation of the project.
+- `Model Deployment.ipynb`: A Jupyter notebook detailing the model deployment process.
+
+These resources provide in-depth insights into the project's methodology, findings, and technical details, ensuring a thorough grasp of the predictive model and its implementation.
