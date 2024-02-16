@@ -33,42 +33,49 @@ The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappoi
 
 This rich dataset provides a comprehensive view of factors potentially influencing patient attendance, enabling the development of a nuanced predictive model.
 
-## Solution approach
+## Solution Approach
+In addressing the challenge of predicting patient no-shows for healthcare appointments, our solution approach was multifaceted, focusing on both the technical development of a predictive model and its practical integration into the client's existing systems. Here's how we tackled the problem:
 - **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
 - **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
+
+For comprehensive project overview, please refer to `Project Documentation.pdf`.
 
 <p align="center">
     <img src="Notebook_images/High level structure.png" alt="Image" style="width: 100%; height: 25%;" />
 </p>
 
-For comprehensive project overview, please refer to `Project Documentation.pdf`.
-
 ## Project Structure
-- `data/`: Contains datasets used in the project.
-    - `input/`: Raw data files.
-    - `processed/`: Data file that have been cleaned and preprocessed.
-    - `output/`: Output data file, including model predictions.
-    - `features/`: Contains the important features used for filtering the data.
-    - `hyperparameters/`: Contains the best hyperparameters obtained from Hyperopt tuning.
-- `src/`: Source code for the project.
-    - `data_loader.py`: Script for loading and preprocessing data.
-    - `preprocessing.py`: Script containing data preprocessing functions.
-    - `feature_engineering.py`: Script for feature engineering tasks.
-    - `modeling.py`: Contains model training, evaluation, and prediction scripts.
-    - `train.py`: Main script for training the model.
-    - `predict.py`: Script for making predictions using the trained model.
-    - `requirements.txt`: Lists the Python dependencies required for the project.
-    - `snowflake_creds.py`: Contains credentials for Snowflake database access.
-- `model/`: Trained model files and artifacts.
-- `deployment_assets/`: Files and scripts used for deploying the model.
-- `Snowflake_assets/`: Contains an original data file used for creating the database and a SQL file containing queries for exploratory analysis.
-- `Notebook_images/`: Contains images used in the `Model Deployment.ipynb` notebook.
-- `Project Notebook.ipynb`: Jupyter notebook detailing the model development process.
-- `Project Documentation.pdf`: Comprehensive documentation of the project.
-- `Model Deployment.ipynb`: Jupyter notebook detailing the model deployment process.
-- `README.md`: This file, contains project information and instructions.
+The project is organized into several directories and files, each serving a specific purpose in the development, deployment, and documentation of the machine learning model. Below is an overview of the project structure and the contents of each component:
+
+```markdown
+Medical-Appointment-No-Show-Prediction
+├── data/
+│   ├── input/                  # Raw data files.
+│   ├── processed/              # Data files that have been cleaned and preprocessed.
+│   ├── output/                 # Output data files, including model predictions.
+│   ├── features/               # Contains the important features used for filtering the data.
+│   └── hyperparameters/        # Contains the best hyperparameters obtained from Hyperopt tuning.
+├── src/
+│   ├── data_loader.py          # Script for loading and preprocessing data.
+│   ├── preprocessing.py        # Script containing data preprocessing functions.
+│   ├── feature_engineering.py  # Script for feature engineering tasks.
+│   ├── modeling.py             # Contains model training, evaluation, and prediction scripts.
+│   ├── train.py                # Main script for training the model.
+│   ├── predict.py              # Script for making predictions using the trained model.
+│   ├── requirements.txt        # Lists the Python dependencies required for the project.
+│   └── snowflake_creds.py      # Contains credentials for Snowflake database access.
+├── model/                      # Trained model files and artifacts.
+├── deployment_assets/          # Files and scripts used for deploying the model.
+├── Snowflake_assets/           # Original data file for database creation and SQL queries for EA.
+├── Notebook_images/            # Images used in the Model Deployment.ipynb notebook.
+├── Project Notebook.ipynb      # Jupyter notebook detailing the model development process.
+├── Project Documentation.pdf   # Comprehensive documentation of the project.
+├── Model Deployment.ipynb      # Jupyter notebook detailing the model deployment process.
+└── README.md                   # Project information and instructions.
+```
 
 ## Usage
+To get started with this project and replicate the results or deploy the model in environment, follow the steps outlined below:
 - To train the model locally, first set up the project environment, install the required Python dependencies:
     ```bash
     pip install -r src/requirements.txt
