@@ -97,7 +97,7 @@ To get started with this project and replicate the results or deploy the model, 
 
 - To train model on AWS Sagemaker, upload all project assets to the workspace, and run `Code Modularization.ipynb`.
 
-### Additional Resources
+## Additional Resources
 
 For a comprehensive understanding of the project, including its development and deployment processes, refer to the following documents:
 
