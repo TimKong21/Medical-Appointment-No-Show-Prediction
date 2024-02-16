@@ -37,12 +37,11 @@ This rich dataset provides a comprehensive view of factors potentially influenci
 
 ## Solution Approach
 
-In addressing the challenge of predicting patient no-shows for healthcare appointments, our solution approach focuses on both the technical development of a predictive model and its practical integration into the client's existing systems.<br> 
+In addressing the challenge of predicting patient no-shows for healthcare appointments, our solution approach focuses on both the technical development of a predictive model and its practical integration into the client's existing systems.
 Here's how we tackled the problem:
+
 - **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
 - **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
-
-For comprehensive project overview, please refer to `Project Documentation.pdf`.
 
 <p align="center">
     <img src="Notebook_images/High level structure.png" alt="Image" style="width: 100%; height: 25%;" />
@@ -50,7 +49,8 @@ For comprehensive project overview, please refer to `Project Documentation.pdf`.
 
 ## Project Structure
 
-The project is organized into several directories and files, each serving a specific purpose in the development, deployment, and documentation of the machine learning model.<br>
+The project is organized into several directories and files, each serving a specific purpose in the development, deployment, and documentation of the machine learning model.
+
 Below is an overview of the project structure and the contents of each component:
 
 ```markdown
@@ -98,3 +98,4 @@ To get started with this project and replicate the results or deploy the model, 
 - To train model on AWS Sagemaker, upload all project assets to the workspace, and run `Code Modularization.ipynb`.
 - For throughout model building process, refer `project notebook.ipynb`.
 - For detail model deployment steps, refer `model deployment.ipynb`.
+- For comprehensive project overview, please refer to `Project Documentation.pdf`.
