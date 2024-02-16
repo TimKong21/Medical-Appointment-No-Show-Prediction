@@ -1,13 +1,15 @@
 # Predicting Patient No-Shows in Healthcare Appointments
 
 ## Business Problem
+
 A significant issue in medical setting is patients failing to attend scheduled doctor appointments despite receiving instructions (no-shows). Our client, a medical ERP solutions provider, seeks to tackle this by introducing a machine learning model into their software. This model aims to predict patient attendance, enabling medical providers to optimize appointment management.
 
 <p align="center">
-    <img src="Notebook_images/Patient no show.png" alt="Image" style="width: 100%; height: 25%;" />
+    <img src="Notebook_images/Patient no show.png" alt="Image" style="width: 90%; height: 25%;" />
 </p>
 
 ## Dataset Description
+
 The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments) utilized in this project comprises appointment records from medical institutions, capturing various attributes related to patients and their appointments. Key features include:
 - **Patient demographics**: age and gender
 - **Health characteristics**: the presence of conditions such as diabetes or hypertension
@@ -34,6 +36,7 @@ The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappoi
 This rich dataset provides a comprehensive view of factors potentially influencing patient attendance, enabling the development of a nuanced predictive model.
 
 ## Solution Approach
+
 In addressing the challenge of predicting patient no-shows for healthcare appointments, our solution approach was multifaceted, focusing on both the technical development of a predictive model and its practical integration into the client's existing systems. Here's how we tackled the problem:
 - **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
 - **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
@@ -45,6 +48,7 @@ For comprehensive project overview, please refer to `Project Documentation.pdf`.
 </p>
 
 ## Project Structure
+
 The project is organized into several directories and files, each serving a specific purpose in the development, deployment, and documentation of the machine learning model. Below is an overview of the project structure and the contents of each component:
 
 ```markdown
@@ -75,7 +79,8 @@ Medical-Appointment-No-Show-Prediction
 ```
 
 ## Usage
-To get started with this project and replicate the results or deploy the model in environment, follow the steps outlined below:
+
+To get started with this project and replicate the results or deploy the model, follow the steps outlined below:
 - To train the model locally, first set up the project environment, install the required Python dependencies:
     ```bash
     pip install -r src/requirements.txt
