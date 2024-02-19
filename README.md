@@ -138,8 +138,8 @@ Medical-Appointment-No-Show-Prediction
 
 For a comprehensive understanding of the project, refer to:
 
-- `Project Notebook.ipynb` for detail model development process
+- `Project Notebook.ipynb` for detail model development process.
 
-- `Model Deployment.ipynb` for detail odel deployment process
+- `Model Deployment.ipynb` for detail model deployment process.
 
-- `Project Documentation.pdf` for comprehensive project documentation
+- `Project Documentation.pdf` for comprehensive project documentation.
