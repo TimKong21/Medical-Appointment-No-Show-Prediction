@@ -124,8 +124,9 @@ Medical-Appointment-No-Show-Prediction
    Train the model and make predictions.
 
    ```bash
-   python src/train.py
-   python src/predict.py
+   cd src
+   python train.py
+   python predict.py
    ```
 
 5. **Model Deployment**
