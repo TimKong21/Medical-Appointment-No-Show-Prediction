@@ -4,18 +4,21 @@
 
 A significant issue in medical setting is patients failing to attend scheduled doctor appointments despite receiving instructions (no-shows). Our client, a medical ERP solutions provider, seeks to tackle this by introducing a machine learning model into their software. This model aims to predict patient attendance, enabling medical providers to optimize appointment management.
 
-<p align="left">
-    <img src="Notebook_images/Patient no show.png" alt="Image" style="width: 90%; height: 25%;" />
+<p align="center">
+    <img src="Notebook_images/Patient no show.png" alt=" Intro image" style="width: 80%"/>
 </p>
 
 ## Dataset Description
 
 The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments) utilized in this project comprises appointment records from medical institutions, capturing various attributes related to patients and their appointments. Key features include:
 
-- **Patient demographics**: age and gender
-- **Health characteristics**: the presence of conditions such as diabetes or hypertension
-- **Appointment-specific details**: scheduled and appointment dates, and whether the patient received a reminder SMS
-- **Target**: binary indicator representing whether a patient was a no-show or attended their appointment.
+- **Patient demographics**: Age and gender.
+
+- **Health characteristics**: The presence of conditions such as diabetes or hypertension.
+
+- **Appointment-specific details**: Scheduled and appointment dates, and whether the patient received a reminder SMS.
+
+- **Target**: Binary indicator representing whether a patient was a no-show or attended their appointment.
 
     | No | Column Name | Description |
     | --- | --- | --- |
@@ -34,19 +37,21 @@ The dataset from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappoi
     | 13 | SMS_received | True or False. Indicates if 1 or more messages sent to the patient. |
     | 14 | No-show | True or False (Target variable). Indicates if the patient missed their appointment. |
 
-This rich dataset provides a comprehensive view of factors potentially influencing patient attendance, enabling the development of a nuanced predictive model.
+## Technical Highlights
 
-## Solution Approach
+The approach to solving the challenge of predicting patient no-shows involved a comprehensive workflow, focusing on both the development of a predictive model and its practical application within an existing system. Here's an overview of the approach taken:
 
-In addressing the challenge of predicting patient no-shows for healthcare appointments, our solution approach focuses on both the technical development of a predictive model and its practical integration into the client's existing systems.
-Here's how we tackled the problem:
+- **Data Storage and Initial Analysis**: Utilized Snowflake for secure data storage and conducted exploratory data analysis (EDA) to understand the dataset's characteristics and identify potential predictive features.
 
-- **Model Development:** Created a machine learning model to assess the likelihood of patient no-shows, enhancing appointment scheduling efficiency.
-- **System Integration:** Deployed the model with an API for integration into the client's ERP system, this allows real-time predictions, streamlining the ERP's existing workflow.
+- **Data Loading and Preprocessing**: Initial steps involved loading the data from Snowflake, followed by preprocessing tasks such as handling missing values, encoding categorical variables, and normalizing features to prepare the dataset for modeling.
 
-<p align="center">
-    <img src="Notebook_images/High level structure.png" alt="Image" style="width: 100%; height: 25%;" />
-</p>
+- **Feature Engineering and Selection**: Engineered meaningful features from the raw data, such as calculating the time interval between scheduling and appointment dates. The selection of features was based on their importance as determined through analysis using logistic regression and decision tree models, focusing on retaining features with at least 1% importance from either model.
+
+- **Dataset and Model Selection**: Various machine learning algorithms, including Logistic Regression, Decision Tree, Random Forest, and XGBoost, were evaluated across different datasets (original, upsampled, downsampled, and SMOTE-enhanced) to identify the best-performing model. XGBoost emerged as the optimal choice, particularly when trained on the original dataset, after adjusting the `scale_pos_weight` parameter to address class imbalance effectively.
+
+- **API Development for Model Deployment**: Created an API for the model, facilitating its integration into the client's ERP system. This step involved deploying the model to AWS SageMaker, setting up an AWS Lambda function for model invocation, and configuring an Amazon API Gateway to expose the model as a RESTful service.
+
+- **Testing and Validation**: Conducted thorough testing of the deployed model using Postman, validating its functionality and ensuring its readiness for real-world application.
 
 ## Project Structure
 
@@ -76,33 +81,65 @@ Medical-Appointment-No-Show-Prediction
 ├── Snowflake_assets/           # Original data file for database creation and SQL queries for exploratory analysis.
 ├── Project Notebook.ipynb      # Jupyter notebook detailing the model development process.
 ├── Project Documentation.pdf   # Comprehensive documentation of the project.
-├── Model Deployment.ipynb      # Jupyter notebook detailing the model deployment process
+├── Model Deployment.ipynb      # Jupyter notebook detailing the model deployment process.
 ```
 
 ## Usage
 
-To get started with this project and replicate the results or deploy the model, follow the steps outlined below:
+1. **Clone the Repository**
 
-- To train the model locally, first set up the project environment, install the required Python dependencies:
-    ```bash
-    pip install -r src/requirements.txt
-    ```
-
-    Then, run the following scripts:
+    Clone the project repository to local machine.
 
     ```bash
-    python src/train.py
-    python src/predict.py
+    git clone https://github.com/TimKong21/Medical-Appointment-No-Show-Prediction.git
+    cd Medical-Appointment-No-Show-Prediction
     ```
 
-- To train model on AWS Sagemaker, upload all project assets to the workspace, and run `Code Modularization.ipynb`.
+2. **Set Up a Virtual Environment**
 
-## Additional Resources
+   Create and activate a virtual environment to manage the project's dependencies.
+   
+   ```bash
+   # Create a virtual environment
+   python -m venv env
+   ```
+   Activate the virtual environment.
+   ```bash
+   # On Windows
+   env\Scripts\activate
 
-For a comprehensive understanding of the project, including its development and deployment processes, refer to the following documents:
+   # On MacOS/Linux
+   source env/bin/activate
+   ```
+3. **Install Dependencies**
 
-- `Project Notebook.ipynb`: A Jupyter notebook detailing the model development process.
-- `Project Documentation.pdf`: Comprehensive documentation of the project.
-- `Model Deployment.ipynb`: A Jupyter notebook detailing the model deployment process.
+   Install the required Python dependencies.
+   
+   ```bash
+   pip install -r src/requirements.txt
+   ```
 
-These resources provide in-depth insights into the project's methodology, findings, and technical details, ensuring a thorough grasp of the predictive model and its implementation.
+4. **Model Training**
+   
+   Train the model and make predictions.
+
+   ```bash
+   python src/train.py
+   python src/predict.py
+   ```
+
+5. **Model Deployment**
+   
+   For deploying the model to AWS SageMaker and setting up the necessary AWS services for model invocation and API exposure, follow step 1 to step 6 on  `Model Deployment.ipynb`. This notebook provides detailed steps for deploying the model to AWS SageMaker, creating an AWS Lambda function, and configuring an Amazon API Gateway to expose the model as a RESTful service.
+
+6. **Testing and Validating with POSTMAN**
+   
+   After deployment, follow step 7 on `Model Deployment.ipynb` to test and validate the model's functionality using POSTMAN. This involves sending requests to the deployed model's API endpoint and verifying the responses to ensure the model operates as expected.
+
+For a comprehensive understanding of the project, refer to:
+
+- `Project Notebook.ipynb` for detail model development process
+
+- `Model Deployment.ipynb` for detail odel deployment process
+
+- `Project Documentation.pdf` for comprehensive project documentation
